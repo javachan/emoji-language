@@ -43,9 +43,9 @@ var __MAP__ = [
 var WIDTH = 51;
 
 var __POPULATION__ = {
-  'A': 12,
-  'B': 12,
-  'C': 12,
+  'A': 10,
+  'B': 10,
+  'C': 10,
 };
 
 var __ISLANDS__ = {
@@ -55,9 +55,9 @@ var __ISLANDS__ = {
 };
 
 var __INITIAL_WORDS__ = {
-  'A': '🧟',
-  'B': '‍🧞',
-  'C': '🧚',
+  'A': window.__QUERYSTRING__.get('a') || '🧞‍♂️',
+  'B': window.__QUERYSTRING__.get('b') || '‍🤸',
+  'C': window.__QUERYSTRING__.get('c') || '👩‍🎤',
 };
 
 var __GATES__ = {

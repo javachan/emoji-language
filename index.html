@@ -7,9 +7,8 @@
 </head>
 <body>
 <div class="canvas-container">
-  <h1>Language Evolution Simulation</h1>
-  <p>with <a href="https://www.wikiwand.com/en/Agent-based_model">Agent Based Models</a>
-  - <a href="http://github.com/fatiherikli/language-evolution-simulation">Source code on github</a></p>
+  <h1>Emoji as a Language</h1>
+  <p>Based on <a href="https://github.com/otomat-hackathon/language-evolution-simulation">Language-Evolution-Simulation</a></p>
   <svg id="canvas" xmlns="http://www.w3.org/2000/svg" width="510" height="420"></svg>
   <div class="info">
     <div id="stats"></div>
@@ -17,12 +16,11 @@
 </div>
 <div class="rules">
   <h3>Rules</h3>
-  If an agent intersect with another agent, picks a word 
-  from the own vocabulary and tells that. The neighborhood receives and adds that word into its vocabulary as
+  This is what happens when an agent's path crosses with another one:
   <ul>
-    <li>Mutation of a vowel sound with 0.1 probability</li>
-    <li>Mutation of a const sound with 0.1 probability</li>
-    <li>Comparing with another word</li>
+    <li>Mutation of a vowel emoji by 0.1 chance</li>
+    <li>Mutation of a const emoji by 0.1 chance</li>
+    <li>Compounding with another emoji</li>
     <li>Without any mutation</li>
   </ul>
 </div>
@@ -33,10 +31,13 @@
 <script type="text/template" id="island_stats_template">
   <div class="island-stats">
     <h3 style="color: {{= color }}">{{= name }}</h3>
-    <h4>Most used word</h4> 
+    <h4>Most used emoji</h4> 
     <span class="word">{{= instance ? instance.word : 'N/A' }}</span>
     <span class="parent">{{= instance && instance.parent && instance.parent.word }}</span>
   </div>
+</script>
+<script>
+window.__QUERYSTRING__ = new URLSearchParams(window.location.search);
 </script>
 <script src="js/Map.js"></script>
 <script src="js/Island.js"></script>

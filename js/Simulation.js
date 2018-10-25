@@ -152,7 +152,7 @@ Simulation.prototype.colorizeWord = function (instance) {
   if (instance.island) {
     span.style.color = __ISLANDS__[instance.island.code][1];
   }
-  span.innerHTML = instance.word || instance;
+  span.innerHTML = (instance.word || instance).replace(/�/g, '');
   return span;
 };
 
