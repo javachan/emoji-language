@@ -126,3 +126,17 @@ p {
 a {
   color: black;
 }
+
+#new-simulation {
+  display: block;
+  padding: 1em 2em;
+  background: #5814b2;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#new-simulation:hover {
+  background: black;
+  color: white;
+}

@@ -43,9 +43,9 @@ var __MAP__ = [
 var WIDTH = 51;
 
 var __POPULATION__ = {
-  'A': 10,
-  'B': 10,
-  'C': 10,
+  'A': 50,
+  'B': 50,
+  'C': 50,
 };
 
 var __ISLANDS__ = {

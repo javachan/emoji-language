@@ -8,6 +8,8 @@ function Simulation(canvas, model) {
   );
 
   window.__MODEL__ = model;
+
+  this.renderNewSimulationLink();
 }
 
 Simulation.prototype.tick = function () {
@@ -177,6 +179,13 @@ Simulation.prototype.onEventLogUpdate = function (event, instance) {
   eventLogElement.insertBefore(logEntry, eventLogElement.firstChild);
 
   this.renderStats();
+};
+
+Simulation.prototype.renderNewSimulationLink = function () {
+  document.getElementById('new-simulation').addEventListener('click', function () {
+    const [a, b, c] = document.querySelectorAll('.word');
+    window.location.href = `?a=${a.innerHTML}&b=${b.innerHTML}&c=${c.innerHTML}`;
+  });
 };
 
 Simulation.prototype.renderStats = function () {
